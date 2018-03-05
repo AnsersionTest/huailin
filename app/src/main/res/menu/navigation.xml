@@ -4,7 +4,7 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_class_black"
-        android:title="@string/title_class" />
+        android:title="@string/title_classify" />
 
     <item
         android:id="@+id/navigation_dashboard"
