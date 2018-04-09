@@ -3,6 +3,7 @@
     package="com.ansersion.hubing.huailin">
 
     <application
+        android:name=".application.HuailinApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,6 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:label="@string/app_name">
             <intent-filter>

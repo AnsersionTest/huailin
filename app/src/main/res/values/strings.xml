@@ -3,4 +3,9 @@
     <string name="title_classify">分类</string>
     <string name="title_message">消息</string>
     <string name="title_me">我</string>
+
+    <string name="TODO">物品描述</string>
+    <string name="TODO_PRICE">￥10.0</string>
+    <string name="search">搜索...</string>
+    <string name="login">登录</string>
 </resources>

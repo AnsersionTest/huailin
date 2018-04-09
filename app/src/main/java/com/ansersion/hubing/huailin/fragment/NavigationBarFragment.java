@@ -25,11 +25,17 @@ public class NavigationBarFragment extends BaseFragment {
 
     private static final String LOG_TAG = Thread.currentThread().getStackTrace()[1].getClassName();
 
-    @Bind(R.id.id_main_bottom_navigation_view)
-    BottomNavigationView bottomNavigationView;
+    @Bind(R.id.id_radio_button_classify)
+    RadioButton rbtClassify;
+    @Bind(R.id.id_radio_button_message)
+    RadioButton rbtMessage;
+    @Bind(R.id.id_radio_button_me)
+    RadioButton rbtMe;
+    @Bind(R.id.id_radio_group)
+    RadioGroup radioGroup;
 
     private BaseFragment classifyFragment;
-    private BaseFragment notifyFragment;
+    private BaseFragment messageFragment;
     private BaseFragment meFragment;
 
     @Override
@@ -42,14 +48,12 @@ public class NavigationBarFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         setFragmentId(R.layout.fragment_navigation);
 
-        /*
-        bcFragment = new BeecomFragment();
-        mnFragment = new ManageFragment();
-        shFragment = new ShareFragment();
-        meFragment = new MeFragment();
-        */
 
-        // bcFragment.startFragment(false);
+        classifyFragment = new ClassifyFragment();
+        messageFragment = new MessageFragment();
+        meFragment = new MeFragment();
+
+        classifyFragment.startFragment(false);
     }
 
     @Nullable
@@ -58,24 +62,23 @@ public class NavigationBarFragment extends BaseFragment {
         View view = inflater.inflate(getFragmentId(), container, false);
         ButterKnife.bind(this, view);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.navigation_home:
-                                // mTextMessage.setText(R.string.title_class);
-                                return true;
-                            case R.id.navigation_dashboard:
-                                // mTextMessage.setText(R.string.title_message);
-                                return true;
-                            case R.id.navigation_notifications:
-                                // mTextMessage.setText(R.string.title_me);
-                                return true;
-                        }
-                        return false;
-                    }
-                });
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.id_radio_button_classify:
+                        classifyFragment.startFragment(false);
+                        break;
+                    case R.id.id_radio_button_message:
+                        messageFragment.startFragment(false);
+                        break;
+                    case R.id.id_radio_button_me:
+                        meFragment.startFragment(false);
+                        break;
+                }
+            }
+        });
 
         return view;
     }

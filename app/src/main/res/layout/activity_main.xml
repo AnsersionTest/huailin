@@ -22,12 +22,12 @@
         android:name="com.ansersion.beecom.BeecomFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_weight="1" />
 
     <FrameLayout android:id="@+id/id_fragment_navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.ansersion.beecom.SelectorBarFragment">
+        android:name="com.ansersion.hubing.huailin.fragment.NavigationBarFragment">
 
     </FrameLayout>
 

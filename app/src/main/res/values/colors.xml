@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="title_bar">#3366CC</color>
+    <!-- Beecom theme -->
     <color name="white">#FFFFFF</color>
+    <color name="light_blue" tools:ignore="UnusedResources">#99CCFF</color>
+    <color name="dark_blue" tools:ignore="UnusedResources">#6699CC</color>
+
+    <color name="click_down">#6699CC</color>
+    <color name="click_up">#6699CC</color>
+    <color name="bar">#99CCFF</color>
+    <color name="fab" tools:ignore="UnusedResources">#6699CC</color>
+
+    <color name="divide_line">#DCDCDC</color>
+
+    <color name="title_bar">#99CCFF</color>
 </resources>
